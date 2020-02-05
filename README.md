@@ -1,3 +1,4 @@
 # SoftwareMethProject1
 
-Whoah I just edited this.
+Project 1 by Eliza Nieves and Raheel Ozair.
+Confirmed remote access to work :D!
