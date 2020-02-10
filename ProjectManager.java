@@ -16,12 +16,16 @@ public class ProjectManager
          String command = stdin.next();
          switch (                )  
          {   
-            case 'A': add();
+		 case 'A': add();
 		      break; 
-            case  
-            case               
-            case     
-            default: //deal with bad command here 
+		 case 'P': print();
+            	      break;
+		 case 'R': remove();              
+		      break;
+		 case 'Q': print();
+	 	      System.out.println("The team is ready to go!");
+		      break;
+		 default: //deal with bad command here 
          }  
       }
       //write java code before you terminate the program
@@ -29,6 +33,9 @@ public class ProjectManager
    
    private void add()
    {
+	   
+	   TeamMember currName = new TeamMember(stdin.next(),stdin.next());
+	   
       	//must check if the date is valid
 	//must call the contains() method to check if a given 
 	//team member is in the team already
