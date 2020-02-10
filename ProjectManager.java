@@ -2,11 +2,11 @@
 
  @author
  */
-
+import java.util.Scanner;
 public class ProjectManager
 {
-   Scanner stdin;
-   Team cs213;
+   Scanner stdin = new Scanner(System.in);
+   Team cs213 = new Team();
    public void run()
    {
      System.out.println("Let's start a new team!");
@@ -14,23 +14,23 @@ public class ProjectManager
      while ( !done )
      {
        String command = stdin.next();
-       switch (                )
+       switch (command)
        {
-         case 'A': add();
+         case "A": add();
          break;
 
-         case 'P': print();
+         case "P": print();
          break;
 
-         case 'R': remove();
+         case "R": remove();
          break;
 
-         case 'Q': print();
+         case "Q": print();
          System.out.println("The team is ready to go!");
          done = true;
          break;
 
-         default: System.out.println("Command '" + command + "' is not supported!") //deal with bad command here
+         default: System.out.println("Command '" + command + "' is not supported!"); //deal with bad command here
        }
      }
       //write java code before you terminate the program
@@ -47,12 +47,14 @@ public class ProjectManager
      }
      //now check if name/start date exists
      TeamMember newMember = new TeamMember(currName,currDate);
-     // memberExists = cs213.find(newMember);
-     if(cs213.find(newMember) == -1){
+     if(cs213.isEmpty()){
        cs213.add(newMember);
-       System.out.println(newMember.print().toString());
+       System.out.println(newMember.toString());
+     }else if(!cs213.contains(newMember)){
+       cs213.add(newMember);
+       System.out.println(newMember.toString());
      }else{
-       System.out.println(newMember.toString() + " is already in the team.")
+       System.out.println(newMember.toString() + " is already in the team.");
      }
    }
 
@@ -67,7 +69,7 @@ public class ProjectManager
       }
       //now check if member exists in team
       TeamMember member = new TeamMember(currName,currDate);
-      if(cs213.find(newMember) == -1){
+      if(!cs213.contains(member)){
         System.out.println(member.toString() + " is not a team member.");
       }else{
         cs213.remove(member);
