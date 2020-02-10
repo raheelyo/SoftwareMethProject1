@@ -9,32 +9,32 @@ public class ProjectManager
    Team cs213;
    public void run()
    {
+     System.out.println("Let's start a new team!");
+     boolean done = false;
+     while ( !done )
+     {
+       String command = stdin.next();
+       switch (                )
+       {
+         case 'A': add();
+         break;
 
-      boolean done = false;
-      while ( !done )
-      {
-         String command = stdin.next();
-         switch (                )
-         {
-           case 'A': add();
-           break;
+         case 'P': print();
+         break;
 
-           case 'P': print();
-           break;
+         case 'R': remove();
+         break;
 
-           case 'R': remove();
-           break;
+         case 'Q': print();
+         System.out.println("The team is ready to go!");
+         done = true;
+         break;
 
-           case 'Q': print();
-           System.out.println("The team is ready to go!");
-           done = true;
-           break;
-
-           default: System.out.println("Command '" + command + "' is not supported!") //deal with bad command here
-         }
-      }
+         default: System.out.println("Command '" + command + "' is not supported!") //deal with bad command here
+       }
+     }
       //write java code before you terminate the program
-   } //run()
+    } //run()
 
    private void add()
    {
