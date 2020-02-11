@@ -39,8 +39,13 @@ public class ProjectManager
    private void add()
    {
      String currName = stdin.next();
-     Date currDate = new Date(stdin.next());
+     String inputDate = stdin.next();
+     Date currDate = new Date(inputDate);
      //check first if date is valid
+     if(currDate.toString().equals("-1/-1/-1")){
+       System.out.println(inputDate + " is not a date in the form MM/DD/YYYY.");
+       return;
+     }
      if(!currDate.isValid()){
        System.out.println(currDate.toString() + " is not a valid date!");
        return;
