@@ -1,9 +1,9 @@
 /**
  This class defines the common constants.
- You can use this class as is, or define the constants yourself.  
+ You can use this class as is, or define the constants yourself.
  @author Lily Chang
  */
-public class Month 
+public class Month
 {
    public static final int JAN = 1;
    public static final int FEB = 2;
