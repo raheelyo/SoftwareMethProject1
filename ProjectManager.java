@@ -72,11 +72,16 @@ public class ProjectManager
       if(!cs213.contains(member)){
         System.out.println(member.toString() + " is not a team member.");
       }else{
-        cs213.remove(member);
-        System.out.println(member.toString() + " has left the team.");
-      }
+        boolean wasRemoved = cs213.remove(member);
+        //System.out.println(wasRemoved);
+        if(wasRemoved){
+          System.out.println(member.toString() + " has left the team.");
+        }else{
+          System.out.println("Removal failed.");
+        }
 
-   }
+      }
+    }
 
    private void print()
    {
