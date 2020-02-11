@@ -14,12 +14,19 @@ public class Date
    {
 
       StringTokenizer input = new StringTokenizer(d, "/");
+      if(input.countTokens() != 3){
+        this.month = -1;
+        this.day = -1;
+        this.year = -1;
+      }else{
+        this.month = stringToInt(input.nextToken());
 
-      this.month = stringToInt(input.nextToken());
+        this.day = stringToInt(input.nextToken());
 
-      this.day = stringToInt(input.nextToken());
+        this.year = stringToInt(input.nextToken());
+      }
 
-      this.year = stringToInt(input.nextToken());
+
 
       //use StringTokenizer to parse the String and create a Date object
    }
