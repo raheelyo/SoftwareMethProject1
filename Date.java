@@ -1,8 +1,9 @@
 import java.util.*;
 
 /**
-
- @author
+ Stores a date by using its day, month, and year.
+ @author Eliza Nieves
+ @author Raheel Ozair
  */
 public class Date
 {
@@ -10,6 +11,11 @@ public class Date
    private int  month;
    private int  year;
 
+   /**
+    Default constructor for date.  Parses and tokenizes a string,
+    retrieving the day, month, and year.
+    * @param d String to convert to a date.
+    */
    public Date(String d)
    {
 
@@ -31,6 +37,11 @@ public class Date
       //use StringTokenizer to parse the String and create a Date object
    }
 
+   /**
+    Converts a string made up of integer characters to an int.
+    * @param str String to convert to an int.
+    * @return integer value of string.
+    */
    private int stringToInt(String str){
      //System.out.println(str);
       int sum = 0;
@@ -42,6 +53,10 @@ public class Date
       return sum;
    }
 
+   /**
+    Constructor for date that clones another instance.
+    * @param d Date to be cloned.
+    */
    public Date(Date d)
    {
       this.day = d.day;
@@ -50,6 +65,10 @@ public class Date
       //this is a constructor
    }
 
+   /**
+    Checks to see if a given date is valid. (Ex. 1/43/2019 is not valid).
+    * @return Boolean as to whether the date is valid -- true if it is.
+    */
    public boolean isValid()
    {
       int daysInMonth = 0;
@@ -85,6 +104,10 @@ public class Date
       return false;
    }
 
+   /**
+    Returns the date as a string of the format "month/day/year"
+    @return Date as a string.
+    */
    @Override
    public String toString()
    {
@@ -92,6 +115,12 @@ public class Date
        //use the format "month/day/year"
    }
 
+   /**
+    Checks if an object is equal to this instance of Date,
+    by verifying that it is also an instanceof Date,
+    and that it shares the same day, month, and year.
+    @return Boolean as to whether they are equal -- true if they are.
+    */
    @Override
    public boolean equals(Object obj)
    {
