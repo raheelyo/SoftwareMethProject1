@@ -1,4 +1,4 @@
-
+package project1;
 /**
  Team groups a list of Team Members in an array, keeping track of how many
  members are in the team at a time. Has the ability to grow, shrink, and retrieve 

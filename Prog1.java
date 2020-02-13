@@ -1,6 +1,7 @@
+package project1;
 /**
-  
- @author  
+  Container class to run program.
+ @author Lily Chang  
  */
 public class Prog1
 {

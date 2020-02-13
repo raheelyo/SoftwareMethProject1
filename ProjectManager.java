@@ -1,9 +1,10 @@
+package project1;
+import java.util.Scanner;
 /**
  Reading from standard input, allows users to create and manage teams
  through simple commands.
  @author Raheel Ozair
  */
-import java.util.Scanner;
 public class ProjectManager
 {
    Scanner stdin = new Scanner(System.in);

@@ -1,3 +1,4 @@
+package project1;
 /**
  Class containing the information required to keep track of one unique
  team member--name and date added to the team.
