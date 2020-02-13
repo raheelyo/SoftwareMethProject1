@@ -1,3 +1,4 @@
+package project1;
 /**
  This class defines the common constants.
  You can use this class as is, or define the constants yourself.

@@ -1,23 +1,41 @@
+package project1;
 /**
-
- @author
+ Class containing the information required to keep track of one unique
+ team member--name and date added to the team.
+ @author Eliza Nieves
+ @author Raheel Ozair
  */
 public class TeamMember
 {
    private String name;
    private Date   startDate;
 
+   /** 
+   Constructor for TeamMember given a name (string) and a date (Date class).
+   @param nm name of the TeamMember
+   @param date the date the member was added (Date class)
+   */
    public TeamMember(String nm, Date date)
    {
       this.name = nm;
       this.startDate = date;
    }
 
+   /**
+   Public method to retrieve the private startdate of the team member.
+   @return start date of the Team Member instance (Date class)
+   */
    public Date getStartDate()
    {
       return this.startDate;
    }
 
+   /** 
+   Tests to see if another object is equal to a specific instance of Team Member
+   by checking its name and start date (if it is an instance of Team Member).
+   @param obj object to compare to the instance of Team Member.
+   @return boolean as to whether they are equal -- true if they are, etc.
+   */
    public boolean equals(Object obj)
    {
       if(!(obj instanceof TeamMember)){
@@ -32,6 +50,10 @@ public class TeamMember
       //name and startDate must be the same
    }
 
+   /**
+   Returns a string containing the Team Member's name and start date.
+   @return string with name and start date.
+    */
    public String toString()
    {
       return this.name + " " + this.startDate;
@@ -45,7 +67,7 @@ public class TeamMember
      Date t3Date = new Date("02/28/2019");
      TeamMember t1 = new TeamMember("John",t1Date); //check constructor
      TeamMember t2 = new TeamMember("Wick",t2Date);
-     TeamMember t3 = new TeamMember("John",t3Date); //I'm sorry I'm watching John Wick as I'm doing this
+     TeamMember t3 = new TeamMember("John",t3Date); //I'm sorry I'm watching John Wick as I'm doing this // u r so valid
      System.out.println("Test 1: " + t1.toString() + "\n" + "Test 2: " +
       t2.toString() + "\n" + "Test 3: " + t3.toString()); //Check if toString() works
 
@@ -70,5 +92,5 @@ public class TeamMember
 
       //testbed main; you must include test cases that exercise
       //the constructor and all methods in this class.
-   }//TODO;
+   }
 }
