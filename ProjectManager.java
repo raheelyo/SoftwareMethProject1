@@ -3,6 +3,7 @@ import java.util.Scanner;
 /**
  Reading from standard input, allows users to create and manage teams
  through simple commands.
+ @author Eliza Nieves
  @author Raheel Ozair
  */
 public class ProjectManager
