@@ -1,4 +1,4 @@
-package project1;
+//package softwaremethproject1;
 import java.util.Scanner;
 /**
  Reading from standard input, allows users to create and manage teams

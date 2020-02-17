@@ -1,7 +1,7 @@
-package project1;
+//package softwaremethproject1;
 /**
  Team groups a list of Team Members in an array, keeping track of how many
- members are in the team at a time. Has the ability to grow, shrink, and retrieve 
+ members are in the team at a time. Has the ability to grow, shrink, and retrieve
  information about team members.
  @author Eliza Nieves
  @author Raheel Ozair
@@ -24,9 +24,9 @@ public class Team
    }
 
    /**
-    Searches the array of team members for a specific team member 
+    Searches the array of team members for a specific team member
     using the Team Member equals function, returning the index of
-    where the team member is found. 
+    where the team member is found.
     @param m the Team Member to look for in the team array.
     @return the index that the Team Member is stored at in the array.
             returns -1 if not found.
@@ -116,7 +116,7 @@ public class Team
       return true;
    }
 
-   /** 
+   /**
     Prints out a list of all Team Members in the team list.
    */
    public void print()
